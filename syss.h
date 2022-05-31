@@ -2,7 +2,7 @@ typedef long long ll;
 typedef int long long;
 typedef vector<ll> vl;
 typedef set<ll> sl;
-typedef map<ll> ml;
+typedef map<ll, ll> ml;
 ll sum(ll n, ll m){
     while (m) cnt=n&m, n^=m, m=cnt<<1;
     return n;
