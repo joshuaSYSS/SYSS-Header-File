@@ -571,10 +571,14 @@ ld triArea(ld a, ld b, ld c){
 ld triArea(ld a, ld b, ld angle){
     return a * b * SIN(angle) / 2;
 }
+bool isNum(string s){
+  foreach(x, s)if(x > '9' && x < '0)return 0;
+  return 1;
+}
 typedef struct{
     ld x, y;
 } Point;
-
+                  
 //Demonstration
 void V001(){
     cout << "Hello, World!\n";
