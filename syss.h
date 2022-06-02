@@ -26,6 +26,7 @@ typedef stack<ll> stl;
 typedef queue<ll> ql;
 typedef deque<ll> dq;
 typedef priority_queue<ll> pq;
+typedef pair<ll, ll> pll;
 #define _USE_MATH_DEFINES
 #define M_PI 3.14159265358979323846
 #define INT_MAX 2147483647
@@ -588,6 +589,21 @@ Node* newNode(int data)
     temp->data = data;
     temp->left = temp->right = NULL;
     return temp;
+};
+pll fib(ll n) {
+    if (!n) return {0, 1};
+    auto p = fib(n >> 1);
+    ll c = p.first * (2 * p.second - p.first),  d = p.first * p.first + p.second * p.second;
+    if (n & 1) return {d, c + d};
+    return {c, d};
+}
+vl prefixSumPreprocess(vl v){
+  ll sum = 0;
+  foreach(x, v) sum+=x,x=sum;
+  return v;
+}
+bool linDiop(ll l, ll h, ll n){
+	
 }
                   
 //Demonstration
