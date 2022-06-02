@@ -578,6 +578,17 @@ bool isNum(string s){
 typedef struct{
     ld x, y;
 } Point;
+struct Node {
+    int data;
+    struct Node *left, *right;
+};
+Node* newNode(int data)
+{
+    Node* temp = new Node;
+    temp->data = data;
+    temp->left = temp->right = NULL;
+    return temp;
+}
                   
 //Demonstration
 void V001(){
